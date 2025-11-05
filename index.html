@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-abandonment-dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <!-- SIDEBAR  -->
+        <aside class="sidebar">
+            <div class="sidebar__brand"><i class="fa-solid fa-bolt"></i><span>Bolt</span></div>
+
+            <nav class="sidebar__nav">
+                <a class="nav-item" href="#"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a class="nav-item nav-item--active" href="#"><i
+                        class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+
+                <div class="sidebar__group">
+                    <div class="sidebar__label">Commerce</div>
+                    <a class="nav-item" href="#"><i class="fa-solid fa-cart-shopping"></i><span>Checkout</span></a>
+                    <a class="nav-item" href="#"><i class="fa-solid fa-receipt"></i><span>Transactions</span></a>
+                    <a class="nav-item" href="#"><i class="fa-solid fa-shield-halved"></i><span>Fraud
+                            Protection</span></a>
+                    <a class="nav-item" href="#"><i class="fa-solid fa-scale-balanced"></i><span>Disputes</span></a>
+                </div>
+
+                <div class="sidebar__group">
+                    <div class="sidebar__label">Settings</div>
+                    <a class="nav-item" href="#"><i class="fa-solid fa-gear"></i><span>Administration</span></a>
+                </div>
+            </nav>
+
+            <div class="sidebar__beta">
+                <span class="pill pill--beta">Beta</span>
+                <p>Welcome to the Bolt merchant dashboard beta!</p>
+                <a class="link" href="#">Go to Legacy Dashboard</a>
+                <button class="btn-outline"><i class="fa-regular fa-message"></i>Share your feedback</button>
+            </div>
+        </aside>
+
+        <!--  MAIN  -->
+        <main class="main">
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab">Checkout Funnel</button>
+                <button class="tab">Transactions</button>
+                <button class="tab">Shoppers</button>
+                <button class="tab">Payments</button>
+                <button class="tab tab--active">Abandoned Carts</button>
+                <button class="tab">Risk</button>
+                <button class="tab">Shipping</button>
+            </div>
+            <div class="skippers">
+                <span><i class="fa-solid fa-rotate-left"></i></span>
+                <span><i class="fa-solid fa-rotate-right"></i></span>
+
+            </div>
+            <!-- Controls -->
+            <div class="controls">
+                <div class="controls__left">
+                    <span class="skippers-text">Controls</span>
+                    <span class="kv">Start Date <em>2023/02/07 0…</em></span>
+                    <span class="kv">End Date (inclusive) <em>2023/03/10 0…</em></span>
+                    <span class="kv">Transaction Status <em>All</em></span>
+                    <span class="kv">Status <em>All</em></span>
+                    <span class="kv">Platform <em>All</em></span>
+                    <span class="kv">Merchant Division <em>All</em></span>
+                </div>
+
+            </div>
+
+            <!-- CHART  -->
+            <section class="card">
+                <header class="card__header">
+                    <h2>Abandoned Carts Count and Potential Revenue</h2>
+
+                    <div class="card-header-right">
+                        <span><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <span><i class="fa-solid fa-arrows-up-to-line"></i></span>
+                        <span><i class="fa-solid fa-arrow-up"></i></span>
+                        <span><i class="fa-solid fa-arrow-down"></i></span>
+                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </div>
+                </header>
+
+                <div class="chart">
+                    <div class="chart__right-band" aria-hidden="true"></div>
+
+                    <!-- y-axes -->
+                    <ul class="axis axis--left">
+                        <li>2.5</li>
+                        <li>2.0</li>
+                        <li>1.5</li>
+                        <li>1.0</li>
+                        <li>0.5</li>
+                        <li>0.00</li>
+                    </ul>
+                    <ul class="axis axis--right">
+                        <li>50</li>
+                        <li>40</li>
+                        <li>30</li>
+                        <li>20</li>
+                        <li>10</li>
+                        <li>0</li>
+                    </ul>
+
+                    <!-- plot -->
+                    <div class="plot">
+                        <div class="plot__midline" aria-hidden="true"></div>
+
+                        <!-- FEB group -->
+                        <div class="bar-group">
+                            <div class="stack">
+                                <div class="seg seg--green h-45"><span class="seg__label">499.45</span></div>
+
+                                <div class="seg seg--purple h-42"><span class="seg__label">784.72</span></div>
+                            </div>
+                            <div class="bar-group__label">Feb 2023</div>
+                        </div>
+
+
+
+
+                        <svg class="trend" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+                            <polyline points="70,40 300,150 560,90" />
+                        </svg>
+                        <span class="trend__label trend__label--left">41</span>
+                        <span class="trend__label trend__label--right">12</span>
+
+                        <!-- floating tooltip -->
+                        <div class="tooltip">
+                            <div class="tooltip__title">Mar 2023</div>
+                            <div class="tooltip__row"><span>status</span><span>cart_total</span></div>
+                            <div class="tooltip__row"><i
+                                    class="legend__swatch legend__swatch--purple"></i><span>Skipped</span><span>170.38</span>
+                            </div>
+                            <div class="tooltip__row"><i
+                                    class="legend__swatch legend__swatch--green"></i><span>Emailed</span><span>128.30</span>
+                            </div>
+                            <div class="tooltip__row"><i class="legend__dot legend__dot--purple"></i><span>Checkouts
+                                    Abandoned</span><span>12</span></div>
+                        </div>
+                    </div>
+
+                    <!-- legend -->
+                    <div class="legend">
+                        <span class="legend__item"><i class="legend__swatch legend__swatch--green"></i>Emailed</span>
+                        <span class="legend__item"><i class="legend__swatch legend__swatch--teal"></i>Recovered</span>
+                        <span class="legend__item"><i class="legend__swatch legend__swatch--purple"></i>Skipped</span>
+                        <span class="legend__item"><i class="legend__dot legend__dot--purple"></i>Checkouts
+                            Abandoned</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TABLE -->
+            <section class="card">
+                <header class="card__subheader">
+                    <h3>Abandoned Carts</h3>
+                </header>
+
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Cart ID</th>
+                                <th>Shopper Name</th>
+                                <th>Status</th>
+                                <th>Unsubscribed?</th>
+                                <th>Order Reference</th>
+                                <th class="num">Cart Balance</th>
+                                <th class="num">Discount Available</th>
+                                <th>Discount Details</th>
+                                <th>Transaction Status</th>
+                                <th>Store</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>657074882</td>
+                                <td>Wei-Chen Chen Chen</td>
+                                <td><span class="pill pill--grey">Skipped</span></td>
+                                <td>no</td>
+                                <td class="truncate">49069281-cc7b-4d8c-94c3-597d3665dcc4</td>
+                                <td class="num">66.55</td>
+                                <td class="num">0.00</td>
+                                <td>Other</td>
+                                <td>Other</td>
+                                <td>ze…</td>
+                            </tr>
+                            <tr>
+                                <td>657074964</td>
+                                <td>Wei-Chen Chen Chen</td>
+                                <td><span class="pill pill--green">Emailed</span></td>
+                                <td>no</td>
+                                <td class="truncate">49069281-cc7b-4d8c-94c3-597d3665dcc4</td>
+                                <td class="num">72.20</td>
+                                <td class="num">0.00</td>
+                                <td>Other</td>
+                                <td>Other</td>
+                                <td>ze…</td>
+                            </tr>
+                            <tr>
+                                <td>657075668</td>
+                                <td>Wei-Chen Chen Chen</td>
+                                <td><span class="pill pill--grey">Skipped</span></td>
+                                <td>no</td>
+                                <td class="truncate">aa884f5d-3718-482f-8dd9-d0823cbc6150</td>
+                                <td class="num">0.00</td>
+                                <td class="num">72.20</td>
+                                <td>Coupon …</td>
+                                <td>Other</td>
+                                <td>ze…</td>
+                            </tr>
+                            <tr>
+                                <td>657076055</td>
+                                <td>Wei-Chen Chen Chen</td>
+                                <td><span class="pill pill--grey">Skipped</span></td>
+                                <td>no</td>
+                                <td class="truncate">2518fc71-53aa-4041-b464-36c3139f2779</td>
+                                <td class="num">5.65</td>
+                                <td class="num">0.00</td>
+                                <td>Other</td>
+                                <td>Other</td>
+                                <td>ze…</td>
+                            </tr>
+                            <tr>
+                                <td>657076125</td>
+                                <td>Wei-Chen Chen Chen</td>
+                                <td><span class="pill pill--grey">Skipped</span></td>
+                                <td>no</td>
+                                <td class="truncate">21fa4964-ac9a-4c9f-a786-21b5e851c9e</td>
+                                <td class="num">72.20</td>
+                                <td class="num">0.00</td>
+                                <td>Other</td>
+                                <td>Other</td>
+                                <td>ze…</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+</html>
