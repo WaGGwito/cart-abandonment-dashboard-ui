@@ -597,7 +597,8 @@ a {
 }
 
 .table tbody tr:hover {
-    background: #fafafa
+    background: #fafafa;
+    cursor: pointer;
 }
 
 .num {
